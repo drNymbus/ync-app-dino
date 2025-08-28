@@ -1,0 +1,16 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+
+	font-family: "Atkinson Hyperlegible Mono", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 12;
+	font-style: normal;
+}
+
+canvas {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
