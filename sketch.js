@@ -129,9 +129,9 @@ function keyPressed() {
 
 function handle_input() {
 	if (MOBILE) {
-		if (rotationY < 0) {
+		if (round(rotationY * 10) < 0) {
 			dino.x -= 3;
-		} else if (rotationY > 0) {
+		} else if (round(rotationY * 10) > 0) {
 			dino.x += 3;
 		}
 	} else {
