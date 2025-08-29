@@ -47,6 +47,27 @@ let MUTE = true;
 let SOUND_ICON_PLAY = undefined;
 let SOUND_ICON_MUTE = undefined;
 
+// below code is essential for ios13 and above.
+// A click is needed for the device to request permission
+if (typeof DeviceMotionEvent.requestPermission === 'function') {
+  document.body.addEventListener('click', function() {
+    DeviceMotionEvent.requestPermission()
+      .then(function() {
+        console.log('DeviceMotionEvent enabled');
+      })
+      .catch(function(error) {
+        console.warn('DeviceMotionEvent not enabled', error);
+      })
+  })
+} else {
+  // we are not on ios13 and above
+  // todo
+  // add detection for hardware for other devices
+  // if(got the hardware) {
+  // motion = true;
+  // }
+}
+
 function preload() {
 	SOUND = createAudio('assets/musique_bien.mp3');
 	SOUND_ICON_PLAY = loadImage('assets/sound_icon.png', undefined, err => console.error(`Loading icon failed: ${err}`));
