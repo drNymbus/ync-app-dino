@@ -9,6 +9,10 @@ html, body {
 	font-style: normal;
 }
 
+.credits {
+	font-size: large;
+}
+
 canvas {
 	width:100%;
 	height:75%;
