@@ -129,9 +129,11 @@ function keyPressed() {
 
 function handle_input() {
 	if (MOBILE) {
-		dino.x = rotationX;
-		if (dino.x < 0) { dino.x = 0; }
-		if (dino.x > WIDTH) { dino.x = WIDTH; }
+		if (rotationY < 0) {
+			dino.x -= 3;
+		} else if (rotationY > 0) {
+			dino.x += 3;
+		}
 	} else {
 		if (keyIsDown(LEFT_ARROW)) {
 			dino.x -= 3;

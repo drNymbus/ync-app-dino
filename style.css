@@ -10,6 +10,8 @@ html, body {
 }
 
 canvas {
+	width:100%;
+	height:75%;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
